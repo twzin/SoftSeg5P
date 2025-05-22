@@ -1,0 +1,248 @@
+/* -------------------------------------------------
+   STYLE.CSS  –  Trick Sport | Login + Cadastro
+   ------------------------------------------------- */
+
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* -------------------------------------------------
+   1) BARRA NO TOPO  (login = .navbar | cadastro = .header)
+-------------------------------------------------- */
+.navbar,
+.header {                     /* <— agora os dois têm o mesmo visual */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 2rem;
+
+    background: rgba(0, 0, 0, 0.35);     /* vidro escuro translúcido */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* logo / título  (.brand no login  |  .titulo p no cadastro) */
+.brand,
+.titulo p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+/* links do login */
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .25rem .5rem;
+    transition: color .2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #b2ffc8;
+}
+
+/* botões do menu no cadastro */
+.btnMenu {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: .25rem .5rem;
+    transition: color .2s ease;
+}
+
+.btnMenu:hover {
+    color: #b2ffc8;
+}
+
+/* -------------------------------------------------
+   2) FUNDO
+-------------------------------------------------- */
+.background {
+    background: url("../imagens/2ca9376b1557fa528b8db7c2bde76187.jpg")
+                no-repeat center/cover fixed;
+    background-blend-mode: overlay;
+    background-color: rgba(40, 60, 50, 0.6);
+
+    min-height: 100vh;
+    padding-top: 60px;            /* espaço da barra fixa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 2rem;
+}
+
+/* -------------------------------------------------
+   3) CARTÃO DE FORMULÁRIO  (login e cadastro)
+-------------------------------------------------- */
+.form-geral {
+    width: 100%;
+    max-width: 340px;
+}
+
+.form-login,
+.form-cadastro {                /* <— ambos recebem o mesmo cartão */
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding: 2.5rem 2rem 3rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* títulos */
+.form-login h1,
+.form-cadastro h1 {
+    font-size: 1.6rem;
+    letter-spacing: .05rem;
+    margin-bottom: 2rem;
+}
+
+/* labels */
+.form-login label,
+.form-cadastro label {
+    display: block;
+    text-align: left;
+    font-size: .9rem;
+    margin-bottom: .25rem;
+    color: #e1e1e1;
+}
+
+/* inputs */
+.form-login input,
+.form-cadastro input {
+    width: 100%;
+    padding: .75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+    font-size: .95rem;
+    outline: none;
+    transition: border-color .2s ease;
+}
+
+.form-login input::placeholder,
+.form-cadastro input::placeholder {
+    color: rgba(255, 255, 255, .7);
+}
+
+.form-login input:focus,
+.form-cadastro input:focus {
+    border-color: #b2ffc8;
+}
+
+/* mensagens de erro genéricas */
+.invalid {
+    display: block;
+    font-size: .75rem;
+    color: #ffaaaa;
+    margin-top: -.75rem;
+    margin-bottom: .75rem;
+}
+
+/* botões principais */
+.form-login button,
+.form-cadastro button {
+    width: 100%;
+    padding: .9rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(0, 0, 0, .7);
+    cursor: pointer;
+    transition: background .25s ease, transform .15s ease;
+}
+
+.form-login button:hover,
+.form-cadastro button:hover {
+    background: rgba(0, 0, 0, .85);
+}
+
+.form-login button:active,
+.form-cadastro button:active {
+    transform: translateY(1px);
+}
+
+/* -------------------------------------------------
+   4) CHECKLIST DE SENHA (cadastro)
+-------------------------------------------------- */
+#checklist {
+    background: rgba(0, 0, 0, .25);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+#checklist ul {
+    list-style: none;
+}
+
+#checklist li {
+    font-size: .85rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 1.25rem;
+    color: #ffaaaa;            /* vermelho inicial */
+}
+
+#checklist li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* -------------------------------------------------
+   5) RESPONSIVO
+-------------------------------------------------- */
+@media (max-width: 500px) {
+    .navbar,
+    .header {
+        gap: 1rem;
+        padding-inline: 1rem;
+    }
+    .brand,
+    .titulo p {
+        font-size: 1.2rem;
+    }
+    .nav-links a,
+    .btnMenu {
+        font-size: .9rem;
+    }
+    .form-login,
+    .form-cadastro {
+        padding: 2rem 1.5rem 2.5rem;
+    }
+}
