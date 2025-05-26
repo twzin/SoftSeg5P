@@ -1,7 +1,8 @@
 <?php
-    $email = $_POST["email"];
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
+    $input = json_decode(file_get_contents("php://input"), true);
+    $usuario = $input["user"];
+    $senha = $input["senha"];
+    $email = $input["email"];
 
     include "../DAO/conexao.php";
 
@@ -12,4 +13,14 @@
 
     $stmt->bind_param("sss", $email, $usuario, $senha);
     $stmt->execute();
+     
+    $resultado = $con->affected_rows;
+
+    if ($resultado) {
+        echo json_encode(["CadastroFeito" => $resultado]);
+
+    }
+    
+
 ?>
+

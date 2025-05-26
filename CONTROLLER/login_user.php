@@ -19,9 +19,9 @@
 
     $loginExiste = $resultado->num_rows > 0;   
         
-        if ($loginExiste) {
-            $_SESSION['user'] = $usuario;
-        }
+    if ($loginExiste) {
+        $_SESSION['user'] = $usuario;
+    }
     
     echo json_encode(["loginExiste" => $loginExiste]);
 
