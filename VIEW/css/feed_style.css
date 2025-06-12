@@ -1,0 +1,71 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      margin: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .feed {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .post {
+      width: 300px;
+      background: white;
+      border-radius: 10px;
+      margin: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .post img {
+      width: 100%;
+      display: block;
+    }
+    .post .info {
+      padding: 10px;
+    }
+    .post .usuario {
+      font-weight: bold;
+      color: #333;
+    }
+    .post .legenda {
+      margin-top: 5px;
+      color: #555;
+    }
+        .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f2f2f2;
+      padding: 10px 20px;
+    }
+
+    .top-bar h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .top-buttons {
+      display: flex;
+      gap: 10px; /* Espaçamento entre os botões */
+    }
+
+    .top-button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .top-button:hover {
+      background-color: #0056b3;
+    }
