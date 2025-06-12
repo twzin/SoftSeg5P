@@ -246,3 +246,27 @@ html, body {
         padding: 2rem 1.5rem 2.5rem;
     }
 }
+
+/* Botão de logout posicionado à direita */
+.logout-button {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logout-button form {
+    margin: 0;
+}
+
+.logout-button .btnMenu {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #ffffff;
+    transition: color 0.2s ease;
+}
+
+.logout-button .btnMenu:hover {
+    color: #b2ffc8;
+}
