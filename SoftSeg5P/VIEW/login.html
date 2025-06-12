@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-         <link rel="stylesheet" href="css/index.css"> 
+        <link rel="stylesheet" href="css/index.css"> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/1.3.1/forge.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.1.0/jsencrypt.min.js"></script>
@@ -12,13 +12,13 @@
     </head>
     <body>
         <div class="background">
-                <!-- NAVBAR -->
                 <header class="navbar">
                     <span class="brand">Trick Sport</span>
 
                     <nav class="nav-links">
                         <a href="login.html" class="active">Login</a>
                         <a href="cadastro.html">Cadastro</a>
+                        <a href="perfil.html">Perfil</a>
                     </nav>
                 </header>
 
@@ -27,7 +27,7 @@
                     <form>
                         <h1>LOGIN</h1>
                         <div>
-                            <label for="usuario">E-mail</label>
+                            <label for="usuario">Usuário</label>
                             <input type="text" name="usuario" id="usuario" placeholder="Usuario">   
                             <label id="usuario_invalido" class="invalid"></label>
                         </div>
@@ -38,6 +38,8 @@
                         </div>
                         
                         <button type="button" onclick="login()">Login</button></br>
+                        <div id="mensagemLogin" style="text-align: center; margin-top: 10px; display: none;"></div>
+
                 </form>
             </div>
         </div>

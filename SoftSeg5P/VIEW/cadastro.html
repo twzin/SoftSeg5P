@@ -2,30 +2,26 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- Caminho continua igual porque o style.css está em VIEW/css -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- libs + seu código -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/1.3.1/forge.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.1.0/jsencrypt.min.js"></script>
-    <script src="./MODEL/cadastro_usuario.js"></script>
+    <script defer src="../MODEL/cadastro_usuario.js"></script>
 
     <title>Cadastro</title>
 </head>
 <body>
 
-    <!-- 1.  CABEÇALHO FIXO — fora da .background -->
     <div class="header">
         <div class="titulo"><p>Trick Sport</p></div>
 
         <div class="menu">
             <a href="login.html"><button class="btnMenu">Login</button></a>
             <a href="cadastro.html"><button class="btnMenu">Cadastro</button></a>
+            <a href="perfil.html"><button class="btnMenu">Perfil</button></a>
         </div>
     </div>
 
-    <!-- 2.  BACKGROUND + FORMULÁRIO CENTRALIZADO -->
     <div class="background">
         <div class="form-geral">
             <form id="formCadastro" class="form-cadastro">
@@ -50,7 +46,16 @@
                     </ul>
                 </div>
 
+                <!-- Novo campo: Biografia -->
+                <label for="biografia">Biografia</label>
+                <textarea id="biografia"
+                          name="biografia"
+                          placeholder="Fale um pouco sobre você e seu histórico com esportes..."
+                          rows="4"
+                          style="resize: none; margin-bottom: 1.25rem;"></textarea>
+
                 <button type="button" onclick="cadastrar()">Cadastrar</button>
+                <div id="mensagemCadastro" style="text-align:center; margin-top:10px; display:none;"></div>
             </form>
         </div>
     </div>

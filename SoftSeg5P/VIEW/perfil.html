@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Usuário</title>
+
+    <!-- 1) Mesmo CSS que Login/Cadastro -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 2) Script que busca os dados da sessão -->
+    <script defer src="../MODEL/perfil_usuario.js"></script>
+</head>
+<body>
+    <!-- Barra fixa reaproveitada -->
+    <div class="header">
+        <div class="titulo"><p>Trick Sport</p></div>
+
+        <div class="menu">
+            <a href="login.html"><button class="btnMenu">Login</button></a>
+            <a href="cadastro.html"><button class="btnMenu">Cadastro</button></a>
+            <a href="perfil.html"><button class="btnMenu">Perfil</button></a>
+        </div>
+    </div>
+
+    <div class="background">
+        <div class="form-geral">
+            <!-- Cartão reutilizando estilo dos formulários -->
+            <div class="form-cadastro" style="padding-bottom:2rem;">
+                <h1>PERFIL</h1>
+
+                <label>Usuário</label>
+                <p id="perfilUsuario" style="margin-bottom:1.25rem;"></p>
+
+                <label>E-mail</label>
+                <p id="perfilEmail" style="margin-bottom:1.25rem;"></p>
+
+                <label>Biografia</label>
+                <p id="perfilBio" style="white-space:pre-wrap;"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
